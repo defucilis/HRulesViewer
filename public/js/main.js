@@ -1,9 +1,5 @@
 window.addEventListener('load', () => fetchJson());
 
-
-
-
-
 posts = [];
 tags = [];
 meta = [];
@@ -12,17 +8,21 @@ categories = [];
 
 
 let loadedCount = 0;
-const countToLoad = 21;
-function fetchJson() {
-	for(let i = 0; i < countToLoad; i++) {
-		fetch(`./js/json/posts${(i * 100 + 1)}-${(i + 1) * 100}.json`).then(response => response.json()).then(json => addPosts(json));
-	}
+const countToLoad = 1;
+async function fetchJson() {
+	const response = await fetch("https://hrulesviewer-default-rtdb.firebaseio.com/posts.json");
+	const json = await response.json();
+	console.log(json);
+	addPosts(json);
+	//for(let i = 0; i < countToLoad; i++) {
+	//	fetch(`./js/json/posts${(i * 100 + 1)}-${(i + 1) * 100}.json`).then(response => response.json()).then(json => addPosts(json));
+	//}
 }
 
 function addPosts(json)
 {
-	for(let i = 0; i < json.posts.length; i++) {
-		let post = new Post(json.posts[i]);
+	for(let i = 0; i < json.length; i++) {
+		let post = new Post(json[i]);
 		posts.push(post);
 
 		if(post.tags) {
