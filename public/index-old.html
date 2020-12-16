@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HRules Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.7.1/css/tabulator.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css">
+</head>
+<body>
+    <div class="content">
+        <h1 class="loading">Loading Post Data</h1>
+        <div class="loaded hidden">
+            <h2 class="filtersToggle" onclick="toggleFilters();">Filters ></h2>
+            <div class="filters hidden">
+                <div class="tables">
+                    <div class="tableFilter">
+                        <h3>Tags</h3>
+                        <div id="tags"></div>
+                    </div>
+                    <div class="tableFilter">
+                        <h3>Categories</h3>
+                        <div id="categories"></div>
+                    </div>
+                    <div class="tableFilter">
+                        <h3>Meta</h3>
+                        <div id="meta"></div>
+                    </div>
+                </div>
+                <div class="others">
+                    <div class="input-one">
+                        <label>Title</label>
+                        <input id="titleInput" type="text">
+                    </div>
+                    <div class="input-one">
+                        <label>Author</label>
+                        <input id="authorInput" type="text">
+                    </div>
+                    <div class="input-one">
+                        <label>Language</label>
+                        <select>
+
+                        </select>
+                    </div>
+                    <div class="input-two">
+                        <label>Time</label>
+                        <input type="text">
+                        <input type="text">
+                    </div>
+                    <div class="input-two">
+                        <label>Picture Count</label>
+                        <input type="text">
+                        <input type="text">
+                    </div>
+                    <div class="input-one">
+                        <label>Full Colour</label>
+                        <select>
+
+                        </select>
+                    </div>
+                    <div class="input-one">
+                        <label>Complete</label>
+                        <select>
+
+                        </select>
+                    </div>
+                    <div class="input-one">
+                        <label>Uncensored</label>
+                        <select>
+
+                        </select>
+                    </div>
+                    <div class="input-one">
+                        <label>Retouched</label>
+                        <select>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="posts">
+                
+            </div>
+        <!--
+        <table id="posts" class="hidden">
+            <thead>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Rating</th>
+                <th>Date</th>
+            </thead>
+        </table>
+        -->
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.7.1/js/tabulator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"></script>
+    <script>
+        //initialize awesomplete inputs
+        const titleAwesomplete = new Awesomplete(document.querySelector("#authorInput"));
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

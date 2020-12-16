@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #fcfcfc;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    color: #333;;
+}
+
+.loading {
+    margin-top: 5em;
+    text-align: center;
+}
+
+.filters {
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.filters .tables {
+    width: 50%;
+    float: left;
+}
+
+.filters .others {
+    width: 50%;
+    float: left;
+}
+
+.filters .tables .tableFilter {
+    float: left;
+    width: calc(33% - 10px);
+    margin-right: 10px;
+}
+
+.filters .tables .tableFilter h3 {
+    margin-bottom: 0.5em;
+}
+
+.filtersToggle {
+    cursor: pointer;
+}
+
+.input-one, .input-two {
+    height: 30px;
+}
+
+.input-one label, .input-two label {
+    display: block;
+    width: 30%;
+    float: left;
+}
+
+.input-one div.awesomplete {
+    width: calc(70% - 10px) !important;
+}
+
+.input-one div.awesomplete input {
+    width: 100% !important;
+}
+
+.input-one input, .input-one select {
+    float: left;
+    width: calc(70% - 10px) !important;
+    margin-left: 10px;
+}
+
+.input-two input {
+    float: left;
+    width: calc(35% - 10px);
+    margin-left: 10px;
+}

@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+p, h1, h2, h3, h4, h5, h6, li {
+    color: #fff;
+}
+body {
+    margin: 0;
+    background-color: #1b1b1b;
+}
+.loading {
+    height: 100%;
+    width: 100%;
+}
+
+.loading h1 {
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.hidden { display: none; }
+
+main {
+    display: flex;
+    justify-items: flex-start;
+    padding: 0 20px;
+}
+
+
+
+
+
+/*
+===============================================
+                    HEADER
+===============================================
+*/
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px 0 20px;
+    color: #000;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    width: 30%;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+header ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 60%;
+}
+
+header li {
+    display: inline-flex;
+    padding: 0 10px;
+    align-items: center;
+    height: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-bottom: 2px solid white;
+    color: #fff;
+}
+
+header li:hover {
+    border-bottom: 2px solid teal;
+}
+
+
+
+
+
+
+
+/*
+===============================================
+                    POSTS
+===============================================
+*/
+#posts {
+    width: 60%;
+}
+.tabulator, .tabulator-header, .tabulator-headers, .tabulator-col, .tabulator-row, .tabulator-cell {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.tabulator-row {
+    min-height: 30px !important;
+    background-color: #1b1b1b !important;
+}
+
+.tabulator-row-even {
+    background-color: #202020 !important;
+}
+
+.tabulator-row a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.tabulator-row a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.tabulator-selectable:hover {
+    background-color: #303030 !important;
+}
+
+.tabulator-selected {
+    background-color: #292929 !important;
+    font-weight: bold;
+}
+
+.tabulator-cell {
+    color: #fff;
+}
+
+.tabulator-col-title {
+    color: #fff;
+}
+
+
+
+/*
+===============================================
+                    LAYOUT GENERAL
+===============================================
+*/
+#selected-post, #about, #filters {
+    padding: 0 20px;
+    width: 40%;
+    overflow-y: scroll;
+}
+
+
+
+
+
+/*
+===============================================
+                    DETAILS
+===============================================
+*/
+
+
+#selected-post h2 {
+    font-weight: normal;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.post-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-title p {
+    font-size: 1.5em;
+    height: 100%;
+    margin: 0;
+}
+
+.post-subtitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-subtitle h4, .post-subtitle p {
+    font-weight: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+#selected-post .img-container {
+    display: flex;
+    justify-items: center;
+    text-align: center;
+}
+
+#selected-post img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    justify-self: center;
+    display: block;
+}
+
+.post-details-info {
+    width: 100%;
+    min-height: 200px;
+}
+
+.post-details-info p {
+    margin: 5px 0;
+}
+
+.post-details-info strong {
+    display: inline-block;
+    width: 50%;
+}
+
+.post-details-info span {
+    display: inline-block;
+    width: 50%;
+}
+
+.post-details-info div {
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.post-lists strong {
+    display: inline;
+}
+
+.post-lists p {
+    margin-bottom: 0;
+}
+
+.post-details-open-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-details-open-container a {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.post-details-open-container a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/*
+===============================================
+                    FILTERS
+===============================================
+*/
+#tags, #categories {
+    width: 50%;
+    float: left;
+}
+
+#tags *, #categories * {
+    overflow-x: hidden !important;
+}
+
+.filter-tables {
+    min-height: 200px;
+    margin-bottom: 20px;
+}
+
+.filter-one, .filter-two {
+    height: 30px;
+    margin: 0;
+    width: 100%;
+}
+
+.filter-one p, .filter-two p {
+    float: left;
+    width: 50%;
+    margin: 0;
+}
+
+.filter-one input {
+    float: left;
+    width: 50% !important;
+    margin: 0;
+}
+
+.filter-two input {
+    width: calc(25% - 10px) !important;
+    margin: 0 10px 0 0;
+}
+
+.filter-one select {
+    float: left;
+    width: 50% !important;
+    margin: 0;
+}
+
+.filter-one .awesomplete {
+    width: 50% !important;
+}
+
+.filter-one .awesomplete input {
+    width: 100% !important;
+}
+
+.filter-buttons, .filter-results {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.filter-buttons a {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000;
+    cursor: pointer;
+}
+
+.filter-buttons a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.filter-results p {
+    font-size: 1.2em;
+    color: #000;
+}
+
+
+
+/* ---------------------- 
+     SCROLLBARS
+     -------------------*/
+     /* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #fff #303030;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #303030;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 3px solid white;
+}

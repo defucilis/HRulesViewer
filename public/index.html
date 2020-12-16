@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRules Viewer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.7.1/css/tabulator.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.7.1/js/tabulator.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HRules Viewer</h1>
+        <ul>
+            <li onclick="nav_filters();" id="filters-button">Filters</li>
+            <li onclick="nav_about();">About</li>
+        </ul>
+    </header>
+    <div class="loading">
+        <h1>Loading...</h1>
+    </div>
+    <main class="loaded hidden">
+        <div id="posts">
+
+        </div>
+        <div id="selected-post" class="hidden">
+            <div class="post-title">
+                <h2 id="post-details-title">Post Title</h2>
+                <p id="post-details-rating">★★★★☆</p>
+            </div>
+            <div class="post-subtitle">
+                <h4 id="post-details-author">Post Author</h4>
+                <p id="post-details-date">12/04/2009</p>
+            </div>
+            <div class="post-categories">
+                <p><strong>Categories: </strong><span id="post-details-categories"></span></p>
+            </div>
+            <div class="img-container">
+                <img id="post-details-image" src="https://carepharmaceuticals.com.au/wp-content/uploads/sites/19/2018/02/placeholder-600x400.png">
+            </div>
+            <div class="post-details-info">
+                <div class="main-info">
+                    <p><strong>Picture Count: </strong><span id="post-details-picture-count"></span></p>
+                    <p><strong>Language: </strong><span id="post-details-language"></span></p>
+                    <p><strong>Full Color: </strong><input type="checkbox" id="post-details-full-color"></p>
+                    <p><strong>Uncensored: </strong><input type="checkbox" id="post-details-uncensored"></p>
+                    <p><strong>Complete: </strong><input type="checkbox" id="post-details-complete"></p>
+                    <p><strong>Retouched: </strong><input type="checkbox" id="post-details-retouched"></p>
+                </div>
+                <div class="tags-info">
+                    <p><strong>Tags:</strong></p>
+                    <ul id="post-details-tags">
+                    </ul>
+                </div>
+            </div>
+            <div class="post-details-open-container">
+                <a href="#" target="_blank">Open in HRules.net</a>
+            </div>
+        </div>
+        <div id="filters" class="hidden">
+            <h2>Filters</h2>
+            <div class="filter-tables">
+                <div id="categories"></div>
+                <div id="tags"></div>
+            </div>
+            <div class="filter-one"><p>Title: </p><input id="filter-title"></div>
+            <div class="filter-one"><p>Author: </p><input id="filter-author"></div>
+            <div class="filter-two"><p>Rating: </p><input type="number" step="1" min="0" max="5" id="filter-rating-min" placeholder="min"><input type="number" step="0.5" min="0" max="5" id="filter-rating-max" placeholder="max"></div>
+            <div class="filter-two"><p>Date: </p><input type="date" id="filter-date-min" placeholder="min"><input type="date" id="filter-date-max" placeholder="max"></div>
+            <div class="filter-two"><p>Picture Count: </p><input type="number" step="10" min="0" id="filter-picture-count-min" placeholder="min"><input type="number" step="10" min="0" id="filter-picture-count-max" placeholder="max"></div>
+            <div class="filter-one"><p>Language: </p><select id="filter-language"></select></div>
+            <div class="filter-one"><p>Full Color: </p><input type="checkbox" id="filter-full-color"></div>
+            <div class="filter-one"><p>Uncensored: </p><input type="checkbox" id="filter-uncensored"></div>
+            <div class="filter-one"><p>Complete: </p><input type="checkbox" id="filter-complete"></div>
+            <div class="filter-one"><p>Retouched: </p><input type="checkbox" id="filter-retouched"></div>
+            <div class="filter-buttons">
+                <a onclick="applyFilters();">Apply Filters</a>
+                <a onclick="clearFilters();">Clear Filters</a>
+            </div>
+            <div class="filter-results">
+                <p>Showing 3782 Posts</p>
+            </div>
+        </div>
+        <div id="about">
+            <h2>HRules Viewer</h2>
+            <p>Hopefully this is helpful!</p>
+            <p>By Lachlan</p>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"></script>
+    <script>
+        //initialize awesomplete inputs
+        const titleAwesomplete = new Awesomplete(document.querySelector("#filter-author"));
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
