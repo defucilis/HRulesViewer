@@ -328,18 +328,18 @@ header li:hover {
 .filter-buttons a {
     font-weight: bold;
     font-size: 1.2em;
-    color: #000;
+    color: #fff;
     cursor: pointer;
 }
 
 .filter-buttons a:hover {
     text-decoration: underline;
-    color: #000;
+    color: #fff;
 }
 
 .filter-results p {
     font-size: 1.2em;
-    color: #000;
+    color: #fff;
 }
 
 
